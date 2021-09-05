@@ -7,6 +7,7 @@ const city_name = document.getElementById('city_name');
 const temp_real_val = document.getElementById('temp_real_val');
 const temp_status = document.getElementById('temp_status');
 const datahide = document.querySelector('.middle_layer');
+const change_b = document.getElementById('dda');
 
 var today = new Date();
   var dayy = today.getDay();
@@ -48,16 +49,19 @@ const getInfo = async(event) => {
             if (tempMood == "Clear") {
             temp_status.innerHTML =
                 "<i class='fas  fa-sun' style='color: #eccc68;'></i>";
+                change_b.style.background = '#2ec4b6';
             } else if (tempMood == "Clouds") {
             temp_status.innerHTML =
                 "<i class='fas  fa-cloud' style='color: #f1f2f6;'></i>";
+                change_b.style.background = '#6d6875';
             } else if (tempMood == "Rain") {
             temp_status.innerHTML =
                 "<i class='fas  fa-cloud-rain' style='color: #a4b0be;'></i>";
+                change_b.style.background = '#4895ef';
             } else {
             temp_status.innerHTML =
                 "<i class='fas  fa-cloud' style='color:#f1f2f6;'></i>";
-
+                change_b.style.background = '#ff4d6d';
             }
             datahide.classList.remove('data_hide');
             cityVal = "";
